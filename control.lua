@@ -24,9 +24,9 @@ function initPlayer(player)
 		{"construction-robot",50},
 		{"5d-fusion-reactor-equipment-10",4},
     {"5d-personal-roboport-equipment-10",3},
-    {"kr-energy-shield-mk4",4},
-    {"5d-battery-equipment-10", 4},
-    {"jetpack-4",12},
+    {"energy-shield-mk4-equipment",4},
+    {"5d-battery-equipment-10", 3},
+    {"jetpack-1",24},
     {"5d-personal-laser-defense-equipment-10",10},
     {"5d-personal-tesla-defense-equipment-10",10},
 		-- buildings
