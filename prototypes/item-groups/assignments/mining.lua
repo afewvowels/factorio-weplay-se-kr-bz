@@ -1,0 +1,8 @@
+data.raw.item["burner-mining-drill"].subgroup = "mining-misc"
+data.raw.item["burner-mining-drill"].order = "a"
+data.raw.item["electric-mining-drill"].subgroup = "mining-speed"
+data.raw.item["electric-mining-drill"].order = "a"
+data.raw["repair-tool"]["repair-pack"].subgroup = "repair"
+data.raw["repair-tool"]["repair-pack"].order = "a"
+data.raw.item["lab"].subgroup = "lab"
+data.raw.item["lab"].order = "a"

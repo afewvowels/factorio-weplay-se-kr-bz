@@ -1,0 +1,17 @@
+-- Setup item groups and assign items to them
+-- require("prototypes/item-groups/create-groups")
+-- require("prototypes/item-groups/item-assignments")
+
+-- Various mod changes
+-- require("mods/aai-industry")
+-- require("mods/angels-storage-containers")
+-- require("mods/atomic-overhaul")
+-- require("mods/bzmods")
+-- require("mods/electric-shuttle-train")
+-- require("mods/flare-stack")
+-- require("mods/krastorio")
+-- require("mods/se-space-trains")
+-- require("mods/smr")
+-- require("mods/space-exploration")
+-- require("mods/spidertron-tiers")
+-- require("mods/ultimate-belts")
