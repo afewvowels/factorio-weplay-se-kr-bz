@@ -14,8 +14,12 @@ data.raw["electric-pole"]["5d-substation-02"].supply_area_distance = 12
 data.raw.item["fusion-reactor-equipment"].subgroup = "armor-armor-armor"
 data.raw.recipe["fusion-reactor-equipment"].subgroup = "armor-armor-armor"
 
--- Bounding box has been changed on accumulator somewhere. Idk yet.
--- data.raw["accumulator"]["accumulator"].next_upgrade = "5d-accumulator-02"
+-- Make it work for now! Will create and update the 5Dim fusion reactor equpment line later on
+local reactorEquipment = table.deepcopy(data.raw["generator-equipment"]["fusion-reactor-equipment"])
+local reactorItem = table.deepcopy(data.raw.item["fusion-reactor-equipment"])
+reactorEquipment.name = "5d-fusion-reactor-equipment-01"
+reactorItem.name = "5d-fusion-reactor-equipment-01"
+data:extend({reactorEquipment, reactorItem})
 
 -- Rescale solar panel output for 5dim mod
 local power = 1.0
@@ -212,7 +216,7 @@ for index = 2, 10, 1 do
 end
 
 -- Resize 5dim fusion reactor equipment to 2x2
-for index = 1, 10, 1 do
+for index = 2, 10, 1 do
   local number = "0" .. index
   if index == 10 then
     number = "10"
@@ -392,21 +396,28 @@ for index = 2, 10 do
 end
 
 -- Krastorio switches all "Furnace" type entities to be "Assembling machines" and Space Exploration categorizes the Coke recipe from K2 to "kiln" so this has been quite the journey to figure out this code and it will completely not work if any of the above mods are removed. Also BZFoundry kind of does stuff here too.
-for index = 2, 10 do
-  local name = "5d-electric-furnace-0" .. index
-  if index == 10 then
-    name = "5d-electric-furnace-10"
-  end
 
-  -- if data.raw["assembling-machine"][name] then
+if mods["Krastorio2"] then
+  for index = 2, 10 do
+    local name = "5d-electric-furnace-0" .. index
+    if index == 10 then
+      name = "5d-electric-furnace-10"
+    end
+
     table.insert(data.raw["assembling-machine"][name].crafting_categories,"smelting")
     table.insert(data.raw["assembling-machine"][name].crafting_categories,"smelting-crafting")
     table.insert(data.raw["assembling-machine"][name].crafting_categories,"kiln")
-  -- end
+  end
 end
 
 
-data.raw["reactor"]["nuclear-reactor"].collision_mask = data.raw["reactor"]["5d-nuclear-reactor-02"].collision_mask
+for index = 2, 10 do
+  local name = "5d-nuclear-reactor-0" .. index
+  if index == 10 then
+    name = "5d-nuclear-reactor-10"
+  end
+  data.raw["reactor"][name].collision_mask = data.raw["reactor"]["nuclear-reactor"].collision_mask
+end
 -- data.raw["reactor"]["5d-nuclear-reactor-02"].collision_mask = data.raw["reactor"]["nuclear-reactor"].collision_mask
 
 -- local collision_floor = {
