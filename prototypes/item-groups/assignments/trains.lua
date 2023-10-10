@@ -48,9 +48,10 @@ data.raw["item-with-entity-data"]["fluid-wagon"].subgroup = "trains-liquids"
 data.raw["item-with-entity-data"]["fluid-wagon"].order = "a"
 data.raw["item-with-entity-data"]["artillery-wagon"].subgroup = "trains-vanilla"
 data.raw["item-with-entity-data"]["artillery-wagon"].order = "a"
-data.raw["item-with-entity-data"]["insulated-wagon"].subgroup = "trains-vanilla"
-data.raw["item-with-entity-data"]["insulated-wagon"].order = "aa"
-
+if data.raw["item-with-entity-data"]["insulated-wagon"] then
+  data.raw["item-with-entity-data"]["insulated-wagon"].subgroup = "trains-vanilla"
+  data.raw["item-with-entity-data"]["insulated-wagon"].order = "aa"
+end
 
 data.raw.recipe["locomotive"].subgroup = "trains-locomotive"
 data.raw.recipe["locomotive"].order = "a"

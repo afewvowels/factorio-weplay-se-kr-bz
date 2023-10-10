@@ -1,6 +1,6 @@
 {
   "name": "weplay_se_kr_bz",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "title": "We Play: SE + KR2 + BZMods",
   "author": "We Play",
   "factorio_version": "1.1",
@@ -46,10 +46,8 @@
     "alien-biomes",
     "alien-biomes-hr-terrain",
     "jetpack",
-
     "Atomic_Overhaul",
     "Geothermal",
-
     "space-spidertron",
     "spidertron-dock",
     "spidertron-extended",
@@ -119,8 +117,8 @@
     "FluidMustFlowSE",
     "shield-projector",
     "safefill",
-    "textplates",
     "smr",
+    "textplates",
 
     "Common-Industries",
     "DragonIndustries",
