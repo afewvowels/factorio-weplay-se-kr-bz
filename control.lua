@@ -16,23 +16,23 @@ function initPlayer(player)
 
 	local items = {
 		-- resources
-    {"rocket-fuel",20},
-    {"cliff-explosives", 20},
+    {"rocket-fuel",10},
+    {"cliff-explosives", 100},
 		-- belts
 		-- pipes
 		-- other logistic
 		{"construction-robot",50},
-		{"5d-fusion-reactor-equipment-10",4},
-    {"5d-personal-roboport-equipment-10",3},
-    {"energy-shield-mk4-equipment",4},
-    {"5d-battery-equipment-10", 3},
+		{"5d-fusion-reactor-equipment-01",4},
+    {"personal-roboport-equipment",3},
+    {"energy-shield-mk4-equipment",1},
+    {"battery-equipment", 3},
     {"jetpack-1",24},
-    {"5d-personal-laser-defense-equipment-10",10},
-    {"5d-personal-tesla-defense-equipment-10",10},
+    {"personal-laser-defense-equipment",4},
+    {"5d-personal-tesla-defense-equipment-01",4},
 		-- buildings
 		-- electricity
 		-- equipment
-		{"se-thruster-suit-4",1},
+		{"power-armor",1},
 		{"superior-exoskeleton-equipment",2},
 		{"infinity-chest", 50},
 		{"belt-immunity-equipment",1},

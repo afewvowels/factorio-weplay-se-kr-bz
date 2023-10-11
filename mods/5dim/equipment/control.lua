@@ -30,6 +30,7 @@ equipment.name = "5d-fusion-reactor-equipment-01"
 equipment.power = "100MW"
 equipment.sprite.filename =
     "__5dim_equipment__/graphics/equipment/fusion-reactor/fusion-reactor-equipment-01.png"
+equipment.shape = { width = 2, height = 2, type = "full" }
 
 tech.name = "5d-fusion-reactor-equipment-01"
 tech.icon = item.icon
