@@ -3,7 +3,6 @@
 -- data.raw["technology"]["kr-lithium-sulfur-battery"].prerequisites = {"kr-lithium-processing"}
 -- data.raw["technology"]["kr-lithium-sulfur-battery"].unit.ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1}}
 
-
 -- Add "stream" category to Advanced Chemical Plant
 -- if (mods["space-exploration"]) then
 --   data.raw["assembling-machine"]["kr-advanced-chemical-plant"].crafting_categories = {"chemistry", "space-electromagnetics"}
@@ -28,7 +27,7 @@ data.raw["technology"]["kr-lithium-sulfur-battery"].unit.ingredients = {
 data.raw["technology"]["kr-lithium-sulfur-battery"].prerequisites = {"kr-lithium-processing","se-space-elevator"}
 
 
--- Bleh update ammo distance for sniper turrets
+-- Bleh, update ammo distance for 5dim sniper turrets by copying entire ammo block from K2
 -- Increase ammo maximum range
 local pistol_range = 22
 local rifle_range = 70

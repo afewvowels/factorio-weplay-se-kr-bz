@@ -327,6 +327,7 @@ data.raw["recipe"]["se-space-elevator-cable"].ingredients = {
         amount = 10
     }
 }
+data.raw["recipe"]["se-space-elevator-cable"].energy_required = 3
 
 data.raw["recipe"]["se-space-elevator"].ingredients = {
     {

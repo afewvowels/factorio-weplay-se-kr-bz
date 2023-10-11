@@ -1,0 +1,2 @@
+table.insert(data.raw.technology["advanced-material-processing-2"].effects, { type = "unlock-recipe", recipe = "5d-masher-01" })
+table.insert(data.raw.technology["fluid-handling"].effects, { type = "unlock-recipe", recipe = "5d-water-pumpjack-01" })

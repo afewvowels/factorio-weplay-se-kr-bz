@@ -1,0 +1,1 @@
+table.insert(data.raw.technology["fluid-handling"].effects, { type = "unlock-recipe", recipe = "5d-storage-tank-multi-01" })

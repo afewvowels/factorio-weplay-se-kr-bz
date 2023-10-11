@@ -11,15 +11,8 @@ data.raw["electric-pole"]["substation"].supply_area_distance = 11
 data.raw["electric-pole"]["5d-substation-02"].maximum_wire_distance = 24
 data.raw["electric-pole"]["5d-substation-02"].supply_area_distance = 12
 
-data.raw.item["fusion-reactor-equipment"].subgroup = "armor-armor-armor"
-data.raw.recipe["fusion-reactor-equipment"].subgroup = "armor-armor-armor"
-
--- Make it work for now! Will create and update the 5Dim fusion reactor equpment line later on
-local reactorEquipment = table.deepcopy(data.raw["generator-equipment"]["fusion-reactor-equipment"])
-local reactorItem = table.deepcopy(data.raw.item["fusion-reactor-equipment"])
-reactorEquipment.name = "5d-fusion-reactor-equipment-01"
-reactorItem.name = "5d-fusion-reactor-equipment-01"
-data:extend({reactorEquipment, reactorItem})
+-- data.raw.item["fusion-reactor-equipment"].subgroup = "armor-armor-armor"
+-- data.raw.recipe["fusion-reactor-equipment"].subgroup = "armor-armor-armor"
 
 -- Rescale solar panel output for 5dim mod
 local power = 1.0
@@ -77,73 +70,55 @@ data.raw.item["substation"].icon = "__5dim_energy__/graphics/icon/substation/sub
 
 data.raw.recipe["battery-equipment"].icon = "__5dim_equipment__/graphics/icon/battery/battery-equipment-icon-01.png"
 data.raw.recipe["battery-equipment"].icons = nil
--- data.raw.recipe["battery-equipment"].icon_mipmaps = nil
 data.raw.item["battery-equipment"].icon = "__5dim_equipment__/graphics/icon/battery/battery-equipment-icon-01.png"
 data.raw.item["battery-equipment"].icons = nil
--- data.raw.item["battery-equipment"].icon_mipmaps = nil
 
 data.raw.recipe["battery-mk2-equipment"].icon = "__5dim_equipment__/graphics/icon/battery/battery-equipment-icon-02.png"
 data.raw.recipe["battery-mk2-equipment"].icons = nil
--- data.raw.recipe["battery-mk2-equipment"].icon_mipmaps = nil
 data.raw.item["battery-mk2-equipment"].icon = "__5dim_equipment__/graphics/icon/battery/battery-equipment-icon-02.png"
 data.raw.item["battery-mk2-equipment"].icons = nil
--- data.raw.item["battery-mk2-equipment"].icon_mipmaps = nil
 
 data.raw.recipe["solar-panel-equipment"].icon = "__5dim_equipment__/graphics/icon/solar-panel/solar-panel-equipment-icon-01.png"
 data.raw.recipe["solar-panel-equipment"].icons = nil
--- data.raw.recipe["solar-panel-equipment"].icon_mipmaps = nil
 data.raw.item["solar-panel-equipment"].icon = "__5dim_equipment__/graphics/icon/solar-panel/solar-panel-equipment-icon-01.png"
 data.raw.item["solar-panel-equipment"].icons = nil
--- data.raw.item["solar-panel-equipment"].icon_mipmaps = nil
 
 data.raw.recipe["exoskeleton-equipment"].icon = "__5dim_equipment__/graphics/icon/exoskeleton/exoskeleton-equipment-icon-01.png"
 data.raw.recipe["exoskeleton-equipment"].icons = nil
--- data.raw.recipe["exoskeleton-equipment"].icon_mipmaps = nil
 data.raw.item["exoskeleton-equipment"].icon = "__5dim_equipment__/graphics/icon/exoskeleton/exoskeleton-equipment-icon-01.png"
 data.raw.item["exoskeleton-equipment"].icons = nil
--- data.raw.item["exoskeleton-equipment"].icon_mipmaps = nil
 
 data.raw.recipe["personal-laser-defense-equipment"].icon = "__5dim_equipment__/graphics/icon/personal-laser-defense/personal-laser-defense-equipment-icon-01.png"
 data.raw.recipe["personal-laser-defense-equipment"].icons = nil
--- data.raw.recipe["personal-laser-defense-equipment"].icon_mipmaps = nil
 data.raw.item["personal-laser-defense-equipment"].icon = "__5dim_equipment__/graphics/icon/personal-laser-defense/personal-laser-defense-equipment-icon-01.png"
 data.raw.item["personal-laser-defense-equipment"].icons = nil
--- data.raw.item["personal-laser-defense-equipment"].icon_mipmaps = nil
 
 data.raw.recipe["personal-roboport-equipment"].icon = "__5dim_equipment__/graphics/icon/personal-roboport/personal-roboport-equipment-icon-01.png"
 data.raw.recipe["personal-roboport-equipment"].icons = nil
--- data.raw.recipe["personal-roboport-equipment"].icon_mipmaps = nil
 data.raw.item["personal-roboport-equipment"].icon = "__5dim_equipment__/graphics/icon/personal-roboport/personal-roboport-equipment-icon-01.png"
 data.raw.item["personal-roboport-equipment"].icons = nil
--- data.raw.item["personal-roboport-equipment"].icon_mipmaps = nil
 
 data.raw.recipe["personal-roboport-mk2-equipment"].icon = "__5dim_equipment__/graphics/icon/personal-roboport/personal-roboport-equipment-icon-02.png"
 data.raw.recipe["personal-roboport-mk2-equipment"].icons = nil
--- data.raw.recipe["personal-roboport-mk2-equipment"].icon_mipmaps = nil
 data.raw.item["personal-roboport-mk2-equipment"].icon = "__5dim_equipment__/graphics/icon/personal-roboport/personal-roboport-equipment-icon-02.png"
 data.raw.item["personal-roboport-mk2-equipment"].icons = nil
--- data.raw.item["personal-roboport-mk2-equipment"].icon_mipmaps = nil
 
 data.raw.recipe["centrifuge"].icon = "__5dim_nuclear__/graphics/icon/centrifuge/centrifuge-icon-01.png"
 data.raw.recipe["centrifuge"].icons = nil
--- data.raw.recipe["centrifuge"].icon_mipmaps = nil
 data.raw.item["centrifuge"].icon = "__5dim_nuclear__/graphics/icon/centrifuge/centrifuge-icon-01.png"
 data.raw.item["centrifuge"].icons = nil
--- data.raw.item["centrifuge"].icon_mipmaps = nil
 
-data.raw.recipe["energy-shield-equipment"].icon = "__5dim_equipment__/graphics/icon/energy-shield/energy-shield-equipment-icon-01.png"
-data.raw.recipe["energy-shield-equipment"].icons = nil
--- data.raw.recipe["energy-shield-equipment"].icon_mipmaps = nil
-data.raw.item["energy-shield-equipment"].icon = "__5dim_equipment__/graphics/icon/energy-shield/energy-shield-equipment-icon-01.png"
-data.raw.item["energy-shield-equipment"].icons = nil
--- data.raw.item["energy-shield-equipment"].icon_mipmaps = nil
 
-data.raw.recipe["energy-shield-mk2-equipment"].icon = "__5dim_equipment__/graphics/icon/energy-shield/energy-shield-equipment-icon-02.png"
-data.raw.recipe["energy-shield-mk2-equipment"].icons = nil
--- data.raw.recipe["energy-shield-mk2-equipment"].icon_mipmaps = nil
-data.raw.item["energy-shield-mk2-equipment"].icon = "__5dim_equipment__/graphics/icon/energy-shield/energy-shield-equipment-icon-02.png"
-data.raw.item["energy-shield-mk2-equipment"].icons = nil
--- data.raw.item["energy-shield-mk2-equipment"].icon_mipmaps = nil
+-- Created new tier 1 & 2 energy shield items/equipments/recipes/techs so the whole chain isn't held up until like energy science pack 2 or whatever. That's too late in the game!
+-- data.raw.recipe["energy-shield-equipment"].icon = "__5dim_equipment__/graphics/icon/energy-shield/energy-shield-equipment-icon-01.png"
+-- data.raw.recipe["energy-shield-equipment"].icons = nil
+-- data.raw.item["energy-shield-equipment"].icon = "__5dim_equipment__/graphics/icon/energy-shield/energy-shield-equipment-icon-01.png"
+-- data.raw.item["energy-shield-equipment"].icons = nil
+
+-- data.raw.recipe["energy-shield-mk2-equipment"].icon = "__5dim_equipment__/graphics/icon/energy-shield/energy-shield-equipment-icon-02.png"
+-- data.raw.recipe["energy-shield-mk2-equipment"].icons = nil
+-- data.raw.item["energy-shield-mk2-equipment"].icon = "__5dim_equipment__/graphics/icon/energy-shield/energy-shield-equipment-icon-02.png"
+-- data.raw.item["energy-shield-mk2-equipment"].icons = nil
 
 -- Resize equipment grids
 

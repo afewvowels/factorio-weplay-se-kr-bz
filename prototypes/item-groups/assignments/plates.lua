@@ -29,3 +29,4 @@
 -- data.raw.item["uranium-ore"].order = "d"
 -- data.raw.capsule["raw-fish"].subgroup = "plates-ore"
 -- data.raw.capsule["raw-fish"].order = "e"
+
