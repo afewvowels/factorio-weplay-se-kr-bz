@@ -42,6 +42,12 @@ function initPlayer(player)
 	for _, v in pairs(items) do
 		player.insert{name = v[1], count = v[2]}
 	end
+
+  player.force.technologies["weplay-starting-tech-enhancements"].researched = true
+
+  force.character_build_distance_bonus = 100
+  force.character_reach_distance_bonus = 100
+  force.character_resource_reach_distance_bonus = 100
 end
 
 function onPlayerJoined(event)

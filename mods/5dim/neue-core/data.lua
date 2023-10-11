@@ -14,6 +14,7 @@ require("mods/5dim/equipment/tech")
 
 require("mods/5dim/logistic/tech")
 
+require("mods/5dim/nuclear/control")
 require("mods/5dim/nuclear/tech")
 
 require("mods/5dim/trains/tech")

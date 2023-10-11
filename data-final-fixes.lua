@@ -3,8 +3,10 @@ require("prototypes/item-groups/item-groups")
 
 require("mods/5dim")
 require("mods/5dim/neue-core/data")
+require("mods/base")
 require("mods/modules")
 require("mods/se-space-trains")
+require("mods/space-exploration")
 
 
 -- Increase character reach distance to full screen

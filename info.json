@@ -1,12 +1,13 @@
 {
   "name": "weplay_se_kr_bz",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "title": "We Play: SE + KR2 + BZMods",
   "author": "We Play",
   "factorio_version": "1.1",
   "description": "Customized modpack/play-stuff. SE + KR2 + BZMods + some QoL mods lol",
   "dependencies": [
     "space-exploration",
+    "space-exploration-postprocess",
 
     "Krastorio2",
 

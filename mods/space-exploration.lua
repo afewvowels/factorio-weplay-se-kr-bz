@@ -65,7 +65,7 @@ data.raw.armor["se-thruster-suit-4"].inventory_size_bonus = 400
 
 -- Add module slots to Core Mining Drill
 data.raw["mining-drill"]["se-core-miner-drill"].module_specification.module_slots = 4
-data.raw["mining-drill"]["se-core-miner-drill"].module_specification.allowed_effects = {
+data.raw["mining-drill"]["se-core-miner-drill"].allowed_effects = {
     "consumption",
     "speed",
     "productivity",
@@ -73,8 +73,8 @@ data.raw["mining-drill"]["se-core-miner-drill"].module_specification.allowed_eff
 }
 
 -- Add modules slots to Weapon Delivery Cannon
-data.raw["assembling-machine"]["se-delivery-cannon-weapon"].module_specification.module_slots = 1
-data.raw["assembling-machine"]["se-delivery-cannon-weapon"].module_specification.allowed_effects = {
+data.raw["assembling-machine"]["se-delivery-cannon-weapon"].module_specification.module_slots = 2
+data.raw["assembling-machine"]["se-delivery-cannon-weapon"].allowed_effects = {
     "consumption",
     "speed",
     "productivity",
@@ -82,8 +82,13 @@ data.raw["assembling-machine"]["se-delivery-cannon-weapon"].module_specification
 }
 
 -- Reduce stack size on several items
-data.raw["item"]["se-methane-ice"].stack_size = 200
-data.raw["item"]["se-water-ice"].stack_size = 200
+if data.raw["item"]["se-methane-ice"].stack_size > 200 then
+  data.raw["item"]["se-methane-ice"].stack_size = 200
+end
+
+if data.raw["item"]["se-water-ice"].stack_size > 200 then
+  data.raw["item"]["se-water-ice"].stack_size = 200
+end
 
 -- Alter matter production recipe to produce less scrap
 -- Have to alter this recipe in the Space Exploration Postprocess mod
@@ -111,26 +116,26 @@ data.raw["item"]["se-space-material-fabricator"].stack_size = 10
 -- Increased satellite stack sizes in base.lua next to navigation satellite
 
 -- Modified stack sizes. Added "* 10" to Solid Rocket Fuel stack size sanity check in space-exploration-postprocess/prototypes/sanity.lua line 5
-data.raw["item"]["se-space-capsule"].stack_size = 10
-data.raw["item"]["se-space-capsule-scorched"].stack_size = 10
-data.raw["item"]["se-cargo-rocket-section"].stack_size = 10
-data.raw["item"]["se-cargo-rocket-section-packed"].stack_size = 10
-data.raw["item"]["se-rocket-launch-pad"].stack_size = 10
-data.raw["item"]["se-rocket-landing-pad"].stack_size = 10
-data.raw["item"]["se-space-manufactory"].stack_size = 10
-data.raw["item"]["se-space-particle-collider"].stack_size = 10
-data.raw["item"]["se-space-particle-accelerator"].stack_size = 10
-data.raw["item"]["se-space-growth-facility"].stack_size = 10
-data.raw["item"]["se-antimatter-reactor"].stack_size = 10
-data.raw["item"]["se-space-probe-rocket-silo"].stack_size = 10
-data.raw["item"]["se-energy-transmitter-emitter"].stack_size = 10
-data.raw["item"]["se-energy-receiver"].stack_size = 10
+-- data.raw["item"]["se-space-capsule"].stack_size = 10
+-- data.raw["item"]["se-space-capsule-scorched"].stack_size = 10
+-- data.raw["item"]["se-cargo-rocket-section"].stack_size = 10
+-- data.raw["item"]["se-cargo-rocket-section-packed"].stack_size = 10
+-- data.raw["item"]["se-rocket-launch-pad"].stack_size = 10
+-- data.raw["item"]["se-rocket-landing-pad"].stack_size = 10
+-- data.raw["item"]["se-space-manufactory"].stack_size = 10
+-- data.raw["item"]["se-space-particle-collider"].stack_size = 10
+-- data.raw["item"]["se-space-particle-accelerator"].stack_size = 10
+-- data.raw["item"]["se-space-growth-facility"].stack_size = 10
+-- data.raw["item"]["se-antimatter-reactor"].stack_size = 10
+-- data.raw["item"]["se-space-probe-rocket-silo"].stack_size = 10
+-- data.raw["item"]["se-energy-transmitter-emitter"].stack_size = 10
+-- data.raw["item"]["se-energy-receiver"].stack_size = 10
 
-data.raw["item"]["se-naquium-processor"].stack_size = 100
-data.raw["item"]["se-naquium-tessaract"].stack_size = 100
+-- data.raw["item"]["se-naquium-processor"].stack_size = 100
+-- data.raw["item"]["se-naquium-tessaract"].stack_size = 100
 
-data.raw["item"]["se-meteor-defence"].stack_size = 5
-data.raw["item"]["se-energy-beam-defence"].stack_size = 5
+-- data.raw["item"]["se-meteor-defence"].stack_size = 5
+-- data.raw["item"]["se-energy-beam-defence"].stack_size = 5
 
 -- Enable solid rocket fuel to liquid rocket fuel recipe from the beginning of the game
 data.raw["recipe"]["se-liquid-rocket-fuel"].enabled = true
