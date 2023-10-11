@@ -17,7 +17,7 @@
 -- end
 
 -- Upsize Angel's silo inventory sizes
-local siloNames = {"silo", "ore1", "ore2", "ore3", "ore4", "ore5", "ore6", "coal", "active-provider", "passive-provider", "storage", "buffer", "requester"}
+local siloNames = {"silo", "ore1", "ore2", "ore3", "ore4", "ore5", "ore6", "coal"}
 
 for _, name in pairs(siloNames) do
   local siloName = "silo-" .. name
@@ -29,16 +29,26 @@ for _, name in pairs(siloNames) do
   end
 end
 
+siloNames = {"active-provider", "passive-provider", "storage", "buffer", "requester"}
+
+for _, name in pairs(siloNames) do
+  local siloName = "silo-" .. name
+  if name == "silo" then
+    siloName = "silo"
+  end
+  if data.raw["logistic-container"][siloName] ~= nil then
+    data.raw["logistic-container"][siloName].inventory_size = 1024
+  end
+end
 
 -- Had to modify stack values for logistics variants in the mod rar archive itself
-local angelsWarehouseNames = {"angels-warehouse", "active-provider", "passive-provider", "storage", "buffer", "requester"}
+local angelsWarehouseNames = {"active-provider", "passive-provider", "storage", "buffer", "requester"}
+
+data.raw.container["angels-warehouse"].inventory_size = 2048
 
 for _, name in pairs(angelsWarehouseNames) do
   local warehouseName = "angels-warehouse-" .. name
-  if name == "angels-warehouse" then
-    warehouseName = "angels-warehouse"
-  end
-  if data.raw.container[warehouseName] ~= nil then
-    data.raw.container[warehouseName].inventory_size = 2048
+  if data.raw["logistic-container"][warehouseName] ~= nil then
+    data.raw["logistic-container"][warehouseName].inventory_size = 2048
   end
 end

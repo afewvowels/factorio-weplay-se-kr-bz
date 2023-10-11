@@ -52,9 +52,12 @@ local function createAssemblerTech(index)
   data:extend({tech})
 end
 
-local tech = data.raw.technology["oil-procesing"]
 
 local function createOilTech(index)
+  local tech = table.deepcopy(data.raw.technology["automation-3"])
+
+  tech.icon = "__base__/graphics/technology/oil-processing.png"
+
   local paddedIndex = "0" .. index
   if index == 10 then
     paddedIndex = index
@@ -247,7 +250,7 @@ for index = 2, 10 do
   if index > 3 then
     createAssemblerTech(index)
   end
-  -- createOilTech(index)
+  createOilTech(index)
   createLabTech(index)
   createMiningTech(index)
 end

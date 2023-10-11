@@ -7,6 +7,7 @@ require("mods/5dim/automation/tech")
 require("mods/5dim/battlefield/control")
 require("mods/5dim/battlefield/tech")
 
+require("mods/5dim/energy/control")
 require("mods/5dim/energy/tech")
 
 require("mods/5dim/equipment/control")
@@ -14,9 +15,12 @@ require("mods/5dim/equipment/tech")
 
 require("mods/5dim/logistic/tech")
 
+require("mods/5dim/mining/control")
+
 require("mods/5dim/nuclear/control")
 require("mods/5dim/nuclear/tech")
 
+require("mods/5dim/trains/control")
 require("mods/5dim/trains/tech")
 
 require("mods/5dim/transport/control")

@@ -2,13 +2,16 @@
 require("prototypes/item-groups/item-groups")
 
 require("mods/5dim")
-require("mods/5dim/neue-core/data")
+require("mods/aai-industry")
+require("mods/angels-storage-containers")
+require("mods/atomic-overhaul")
 require("mods/base")
+require("mods/bzmods")
+require("mods/flare-stack")
+require("mods/krastorio")
 require("mods/modules")
 require("mods/se-space-trains")
+require("mods/smr")
 require("mods/space-exploration")
-
-
--- Increase character reach distance to full screen
-data.raw.character["character"].build_distance = 125
-data.raw.character["character"].reach_distance = 125
+require("mods/spidertron-tiers")
+require("mods/ultimate-belts")

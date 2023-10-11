@@ -1,3 +1,7 @@
+remote.add_interface("weplay_se_kr_bz", {
+  jetpack_fuels = function() return {["shielded-plutonium-jetpack-fuel"] = 1.2} end
+})
+
 function initPlayer(player)
   if player.character == nil then return end
 	if global == nil then
@@ -16,7 +20,7 @@ function initPlayer(player)
 
 	local items = {
 		-- resources
-    {"rocket-fuel",10},
+    {"shielded-plutonium-jetpack-fuel",100},
     {"cliff-explosives", 100},
 		-- belts
 		-- pipes
@@ -24,7 +28,7 @@ function initPlayer(player)
 		{"construction-robot",50},
 		{"5d-fusion-reactor-equipment-01",4},
     {"personal-roboport-equipment",3},
-    {"energy-shield-mk4-equipment",1},
+    {"5d-energy-shield-equipment-01",1},
     {"battery-equipment", 3},
     {"jetpack-1",24},
     {"personal-laser-defense-equipment",4},

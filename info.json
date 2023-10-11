@@ -1,6 +1,6 @@
 {
   "name": "weplay_se_kr_bz",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "title": "We Play: SE + KR2 + BZMods",
   "author": "We Play",
   "factorio_version": "1.1",
@@ -49,6 +49,7 @@
     "jetpack",
     "Atomic_Overhaul",
     "Geothermal",
+
     "space-spidertron",
     "spidertron-dock",
     "spidertron-extended",
@@ -66,6 +67,7 @@
     "OreEraser",
     "PipeVisualizer",
     "power-grid-comb",
+    "puppy-jetpack-ui",
     "show-max-underground-distance",
     "sonaxaton-research-queue",
     "Soundpack-alerts-and-sirens-updated-v1-1",

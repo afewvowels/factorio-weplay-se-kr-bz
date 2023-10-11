@@ -146,6 +146,7 @@ end
 -- Modify combinators and such to not use power
 data.raw["arithmetic-combinator"]["arithmetic-combinator"].energy_source.type = "void"
 data.raw["decider-combinator"]["decider-combinator"].energy_source.type = "void"
+
 if mods["nixie-tubes"] then
   data.raw["lamp"]["nixie-tube"].energy_source.type = "void"
   data.raw["lamp"]["nixie-tube-alpha"].energy_source.type = "void"
@@ -177,7 +178,7 @@ if mods["space-exploration"] then
   -- data.raw["curved-rail"]["se-space-curved-rail"].collision_mask = {"object-layer"}
 end
 
-
+-- Technology for quicker start. Bot speed upgrade, hand crafting speed, base inverntory slot bonus, etc., etc.
 data:extend({
   {
     type = "technology",

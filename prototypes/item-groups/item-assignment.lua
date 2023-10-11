@@ -56,6 +56,9 @@ require("prototypes/item-groups/assignments/trains")
 -- Nuclear
 require("prototypes/item-groups/assignments/nuclear")
 
+-- Vanilla + K2 + SE Basic Science pack reassignment
+require("prototypes/item-groups/assignments/science-packs")
+
 -- Transport - Miniloaders
 require("prototypes/item-groups/assignments/transport-miniloaders")
 
