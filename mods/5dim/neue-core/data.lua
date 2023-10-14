@@ -13,6 +13,7 @@ require("mods/5dim/energy/tech")
 require("mods/5dim/equipment/control")
 require("mods/5dim/equipment/tech")
 
+require("mods/5dim/logistic/control")
 require("mods/5dim/logistic/tech")
 
 require("mods/5dim/mining/control")

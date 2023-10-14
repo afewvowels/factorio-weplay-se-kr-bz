@@ -32,7 +32,12 @@
 
 -- Atomic Energy hides this tech which keeps Vulcanite Processing technology from being researched
 data.raw.technology["se-centrifuge"].hidden = false
-
+data.raw.recipe["centrifuge"].ingredients = {
+  {"se-heat-shielding", 10},
+  {"advanced-circuit", 3},
+  {"stone-brick", 10},
+  {"steel-plate", 10}
+}
 
 -- Align heat exchangers and steam turbine output/input values
 

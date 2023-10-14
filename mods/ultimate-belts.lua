@@ -1,6 +1,12 @@
 -- Make each tier of ultimate belts dependant on Space Exploration Material Science packs since I've tweaked the mod parameters to use Ultimate Belts as tiers between Space Transport belts and Deep Space Transport Belts. I'll add those changes here if the mod gets updated and I lose the changes made in the mod .rar archive.
 
-data.raw["technology"]["ultra-fast-logistics"].prerequisites = {"space-science-pack"}
+data.raw["technology"]["ultra-fast-logistics"].prerequisites = {"logistics-3"}
+data.raw.technology["ub-ultra-fast-miniloader"].unit.ingredients = {
+  {"automation-science-pack", 1},
+  {"logistic-science-pack", 1},
+  {"chemical-science-pack", 1},
+  {"se-rocket-science-pack", 1}
+}
 -- table.insert(modifyPrerequisites, "space-science-pack")
 -- table.remove(modifyPrerequisites, "logistics-3")
 

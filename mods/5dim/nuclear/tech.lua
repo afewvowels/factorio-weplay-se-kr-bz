@@ -35,6 +35,7 @@ local function createTech(index)
   tech.prerequisites = {"nuclear-power"}
   if index > 2 then
     tech.prerequisites = {"5dim-nuclear-0" .. (index - 1)}
+    table.insert(tech.prerequisites, "logistics-" .. (index - 1))
   end
   tech.unit = {
     count = 120,

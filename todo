@@ -1,0 +1,12 @@
+
+-- Adjust list of se assembling machines to add productivity module support to
+
+-- Done
+
+-- Add processing units (blue circuits) as prerequisite to "se-centrifuge" tech (Reworked recipe for centrifuge to appropriate ingredients for unlock tier)
+-- Tie Tier 3 trains to logistics 3
+-- Adjust personal roboport equipment for smaller radius and higher bot count + charging stations
+-- Adjust Tier 3 electrical distribution to require logistics 3
+-- Adjust Tier 3 miniloader unlock to tie with logistics 3. Currently happening after space science pack + production science pack
+-- Adjust Ultra Fast belt miniloader unlock to match Express Miniloader unlock
+-- Refactor logistics 3 from Space Science Pack to Rocket Tech Card

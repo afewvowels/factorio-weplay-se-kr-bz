@@ -143,6 +143,14 @@ local function minMaxStackSize()
   end
 end
 
+-- This should probably go in a dedicated Miniloader file. Remove science pack requirements that disconnect this from the logistics 3 tech unlock
+data.raw.technology["express-miniloader"].unit.ingredients = {
+  {"automation-science-pack", 1},
+  {"logistic-science-pack", 1},
+  {"chemical-science-pack", 1},
+  {"se-rocket-science-pack", 1}
+}
+
 -- Modify combinators and such to not use power
 data.raw["arithmetic-combinator"]["arithmetic-combinator"].energy_source.type = "void"
 data.raw["decider-combinator"]["decider-combinator"].energy_source.type = "void"
@@ -200,12 +208,24 @@ data:extend({
       },
       {
         type= "character-crafting-speed",
-        modifier = "1.5"
+        modifier = "2.0"
       },
+			{
+				type = "character-mining-speed",
+				modifier = "2.0"
+			},
       {
         type = "character-inventory-slots-bonus",
         modifier = 40
       },
+			{
+				type = "character-build-distance",
+				modifier = 40
+			},
+			{
+				type = "character-reach-distance",
+				modifier = 40
+			},
       {
         type = "inserter-stack-size-bonus",
         modifier = 1
@@ -213,6 +233,14 @@ data:extend({
       {
         type = "stack-inserter-capacity-bonus",
         modifier = 3
+      },
+			{
+        type = "character-logistic-requests",
+        modifier = true
+			},
+      {
+        type = "character-logistic-trash-slots",
+        modifier = 30
       }
     },
     unit = {

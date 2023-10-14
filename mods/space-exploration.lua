@@ -16,7 +16,7 @@ data:extend({
     {
         type = "equipment-grid",
         name = "thruster-suit-02-armor-grid",
-        width = 20,
+        width = 16,
         height = 20,
         equipment_categories = {
             "armor",
@@ -28,7 +28,7 @@ data:extend({
     {
         type = "equipment-grid",
         name = "thruster-suit-03-armor-grid",
-        width = 24,
+        width = 20,
         height = 24,
         equipment_categories = {
             "armor",
@@ -40,7 +40,7 @@ data:extend({
     {
         type = "equipment-grid",
         name = "thruster-suit-04-armor-grid",
-        width = 30,
+        width = 24,
         height = 30,
         equipment_categories = {
             "armor",
@@ -63,6 +63,91 @@ data.raw.armor["se-thruster-suit-3"].inventory_size_bonus = 350
 data.raw.armor["se-thruster-suit-4"].equipment_grid = "thruster-suit-04-armor-grid"
 data.raw.armor["se-thruster-suit-4"].inventory_size_bonus = 400
 
+
+-- Space assembling machine list to add productivity modules specification to
+
+local machines = {
+  "se-space-assembling-machine",
+  "se-space-decontamination-facility",
+  "se-lifesupport-facility",
+  "se-space-manufactory",
+  "se-space-electromagnetics-laboratory",
+  "se-space-biochemical-laboratory",
+  "se-space-astrometrics-laboratory",
+  "se-space-genetics-laboratory",
+  "se-space-gravimetrics-laboratory",
+  "se-space-growth-facility",
+  "se-space-hypercooler",
+  "se-space-laser-laboratory",
+  "se-space-manufactory",
+  "se-space-material-fabricator",
+  "se-space-mechanical-laboratory",
+  "se-space-particle-accelerator",
+  "se-space-particle-collider",
+  "se-space-plasma-generator",
+  "se-space-radiation-laboratory",
+  "se-space-radiator",
+  "se-space-radiator-2",
+  "se-recycling-facility",
+  "se-space-supercomputer-1",
+  "se-space-supercomputer-2",
+  "se-space-supercomputer-3",
+  "se-space-supercomputer-4",
+  "se-space-telescope",
+  "se-space-telescope-xray",
+  "se-space-telescope-gammaray",
+  "se-space-telescope-microwave",
+  "se-space-telescope-radio",
+  "se-space-thermodynamics-laboratory",
+}
+
+for index, name in pairs(machines) do
+  data.raw["assembling-machine"][name].allowed_effects = {
+    "consumption",
+    "speed",
+    "productivity",
+    "pollution"
+  }
+end
+
+data.raw["lab"]["se-space-science-lab"].allowed_effects = {
+  "consumption",
+  "speed",
+  "productivity",
+  "pollution"
+}
+
+-- Allow productivity in space assembling machines
+-- data.raw["assembling-machine"]["se-space-assembling-machine"].allowed_effects = {
+--     "consumption",
+--     "speed",
+--     "productivity",
+--     "pollution"
+-- }
+-- data.raw["assembling-machine"]["se-space-decontamination-facility"].allowed_effects = {
+--     "consumption",
+--     "speed",
+--     "productivity",
+--     "pollution"
+-- }
+
+-- for _, machine in ipairs(data.raw["assembling-machine"]) do
+--   if string.find(machine.name, "se-") then
+--     machine.allowed_effects = {
+--       "consumption",
+--       "speed",
+--       "productivity",
+--       "pollution"
+--     }
+--   end
+-- end
+
+-- data.raw["assembling-machine"]["se-lifesupport-facility"].allowed_effects = {
+--   "consumption",
+--   "speed",
+--   "productivity",
+--   "pollution"
+-- }
 -- Add module slots to Core Mining Drill
 data.raw["mining-drill"]["se-core-miner-drill"].module_specification.module_slots = 4
 data.raw["mining-drill"]["se-core-miner-drill"].allowed_effects = {
@@ -80,6 +165,7 @@ data.raw["assembling-machine"]["se-delivery-cannon-weapon"].allowed_effects = {
     "productivity",
     "pollution"
 }
+
 
 -- Reduce stack size on several items
 if data.raw["item"]["se-methane-ice"].stack_size > 200 then

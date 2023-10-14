@@ -73,6 +73,7 @@ local function createFluidsTech(index)
   tech.prerequisites = {"fluid-handling"}
   if index > 2 then
     tech.prerequisites = {"5dim-fluids-0" .. (index - 1)}
+    table.insert(tech.prerequisites, "logistics-" .. (index - 1))
   end
   tech.unit = {
     count = 120,

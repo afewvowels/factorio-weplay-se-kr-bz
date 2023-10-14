@@ -14,8 +14,8 @@ for index = 1, 8 do
   -- Productivity Module changes
   -- productivityBonus = data.raw.module[name].effect.productivity.bonus
   -- productivityBonus = productivityBonus * 2
-  data.raw.module[name].effect.productivity.bonus = 0.2 + (0.2 * index)
-  data.raw.module[name].effect.speed.bonus = 0.5 + (0.2 * index)
+  data.raw.module[name].effect.productivity.bonus = 0.4 + (0.1 * index)
+  data.raw.module[name].effect.speed.bonus = 0.6 + (0.1 * index)
   data.raw.module[name].effect.consumption.bonus = 0.05 * index
 
   -- Speed Module changes

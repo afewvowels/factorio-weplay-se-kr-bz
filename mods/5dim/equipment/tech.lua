@@ -10,41 +10,41 @@ local function createTech(index)
   tech.effects = {
     {
       type = "unlock-recipe",
-      recipe = "5d-exoskeleton-equipment-" .. paddedIndex
+      recipe = "5d-battery-equipment-" .. paddedIndex
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "5d-personal-roboport-equipment-" .. paddedIndex
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "5d-energy-shield-equipment-" .. paddedIndex
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "5d-power-armor-" .. paddedIndex
     },
     {
       type = "unlock-recipe",
       recipe = "5d-fusion-reactor-equipment-" .. paddedIndex
-    },
-    {
-      type = "unlock-recipe",
-      recipe = "5d-personal-laser-defense-equipment-" .. paddedIndex
-    },
-    {
-      type = "unlock-recipe",
-      recipe = "5d-personal-tesla-defense-equipment-" .. paddedIndex
-    },
-    {
-      type = "unlock-recipe",
-      recipe = "5d-solar-panel-equipment-" .. paddedIndex
     }
   }
-  if index > 2 then
+  if index > 1 then
     table.insert(tech.effects, {
       type = "unlock-recipe",
-      recipe = "5d-battery-equipment-" .. paddedIndex
+      recipe = "5d-exoskeleton-equipment-" .. paddedIndex
     })
     table.insert(tech.effects, {
       type = "unlock-recipe",
-      recipe = "5d-personal-roboport-equipment-" .. paddedIndex
+      recipe = "5d-personal-laser-defense-equipment-" .. paddedIndex
     })
     table.insert(tech.effects, {
       type = "unlock-recipe",
-      recipe = "5d-energy-shield-equipment-" .. paddedIndex
+      recipe = "5d-personal-tesla-defense-equipment-" .. paddedIndex
     })
     table.insert(tech.effects, {
       type = "unlock-recipe",
-      recipe = "5d-power-armor-" .. paddedIndex
+      recipe = "5d-solar-panel-equipment-" .. paddedIndex
     })
   end
 
@@ -54,11 +54,10 @@ local function createTech(index)
     tech.prerequisites = {"5dim-equipment-0" .. (index - 1)}
   end
 
-  if index == 3 then
-    table.insert(tech.prerequisites, "battery-mk2-equipment")
-    table.insert(tech.prerequisites, "personal-roboport-mk2-equipment")
-
-  end
+  -- if index == 3 then
+  --   table.insert(tech.prerequisites, "battery-mk2-equipment")
+  --   table.insert(tech.prerequisites, "personal-roboport-mk2-equipment")
+  -- end
 
   tech.unit = {
     count = 120,
@@ -100,6 +99,6 @@ local function createTech(index)
   data:extend({tech})
 end
 
-for index = 2, 10 do
+for index = 1, 10 do
   createTech(index)
 end

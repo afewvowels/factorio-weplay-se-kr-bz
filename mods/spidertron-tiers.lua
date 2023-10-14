@@ -1,3 +1,5 @@
+
+
 function doubleEquipmentGridSize(name)
   local equipment_grid = data.raw["equipment-grid"][name]
   equipment_grid.width = equipment_grid.width * 2

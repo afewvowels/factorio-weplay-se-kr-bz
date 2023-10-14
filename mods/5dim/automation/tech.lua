@@ -17,6 +17,7 @@ local function createAssemblerTech(index)
   tech.prerequisites = {"automation-3"}
   if index > 4 then
     tech.prerequisites = {"5dim-automation-0" .. (index - 1)}
+    table.insert(tech.prerequisites, "logistics-" .. (index - 1))
   end
   tech.unit = {
     count = 120,
@@ -85,6 +86,7 @@ local function createOilTech(index)
   tech.prerequisites = {"oil-processing"}
   if index > 2 then
     tech.prerequisites = {"5dim-oil-plants-0" .. (index - 1)}
+    table.insert(tech.prerequisites, "logistics-" .. (index - 1))
   end
   tech.unit = {
     count = 120,
@@ -144,6 +146,7 @@ local function createLabTech(index)
   tech.prerequisites = {"electric-lab"}
   if index > 2 then
     tech.prerequisites = {"5dim-labs-0" .. (index - 1)}
+    table.insert(tech.prerequisites, "logistics-" .. (index - 1))
   end
   tech.unit = {
     count = 120,
@@ -207,6 +210,7 @@ local function createMiningTech(index)
   tech.prerequisites = {"advanced-material-processing-2"}
   if index > 2 then
     tech.prerequisites = {"5dim-mining-0" .. (index - 1)}
+    table.insert(tech.prerequisites, "logistics-" .. (index - 1))
   end
   tech.unit = {
     count = 120,
