@@ -8,6 +8,7 @@ Date: 2023.10.15
     - Added Oil Based Paint mod for wider color ranges.
     - Begin tweaking Spidertron Tiers - Community Updates graphics. I don't really appreciate the changes made to the original spidertron graphics so I'm restoring the original graphics with maybe some of the graphics from Spidertron Extended for different colored eyes then using Oil-Based Paints wider color gamut to apply initial tints to the Spidertrons added from Spidertron Tiers - Community updates mod. I've currently swapped out the graphics the mod uses for the base game spidertron and lifted some of the tinting-on-placement code from Spidertron Extended to tint the colors of Tiers spidertrons to kind of match their icons (which are still being used).
     - Added a Burner Productivity Module for the very early game so there's less need to bust out the infinity chest for speeding up early game production.
+    - Added Oil_Based_Paint mod as a dependency.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.16
 Date: 2023.10.14
