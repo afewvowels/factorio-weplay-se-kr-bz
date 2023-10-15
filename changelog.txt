@@ -1,0 +1,7 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.15
+Date: 2023.10.14
+  Changes:
+      - Added pyroflux as a fuel/ammo type for new 5Dim flamethrower turrets
+      - Added new 5Dim equipment for Personal Battery, Power Armor, Energy Shield, Personal Roboport Equipment for Tier 1 and 2. Adjusted recipes for Tier 3 items to use these new items instead of the vanilla gameobjects.
+      - Adjusted Express Miniloader and Ultra-Fast Miniloader tech pack requirements to match Logistics 3 instead of being locked after the Space Science pack.

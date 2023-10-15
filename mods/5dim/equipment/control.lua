@@ -289,6 +289,13 @@ end
 generateNewPersonalBatteryEquipment(1)
 generateNewPersonalBatteryEquipment(2)
 
+
+-- Adjust recipe for first original new 5Dim personal battery (03) to use newly generated 5Dim Personal Battery Equipment instead of original game Battery Equipment MK2
+data.raw.recipe["5d-battery-equipment-03"].ingredients = {
+  {"5d-battery-equipment-02", 2},
+  {"processing-unit", 15},
+  {"low-density-structure", 5}
+}
 -- Resize equipment grids then make new Tier 1 & 2 Power Armor Equipment for 5Dim mods
 local width = 10
 local height = 10
@@ -421,6 +428,16 @@ end
 
 generateNewPowerArmorEquipment(1)
 generateNewPowerArmorEquipment(2)
+
+-- Adjust recipe for first original new 5Dim power armor to use newly generated 5Dim power armors instead of original game Power Armor MK2
+data.raw.recipe["5d-power-armor-03"].ingredients = {
+  {"5d-power-armor-02", 1},
+  {"effectivity-module-2", 25},
+  {"speed-module-2", 25},
+  {"processing-unit", 60},
+  {"electric-engine-unit", 40},
+  {"low-density-structure", 30}
+}
 
 -- Update first new 5Dim energy shield equipment made by the original 5dim_equipment mod which is tier 3 to use these new custom 5dim energy shiedl items in the recipe instead of the vanilla ones which are heavily modified by Krastorio2 and Space Exploration
 data.raw.recipe["5d-energy-shield-equipment-03"].ingredients = {
