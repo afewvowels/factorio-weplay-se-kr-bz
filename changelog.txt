@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.16
+Date: 2023.10.14
+  Major Features:
+    - I figured out how changelogs worked!
+  Features:
+    - I forgot to adjust the Portable Roboport Equipment recipe requirement like I said I did in the last changelog. I did it this time. (Thanks Github Copilot and/or tabnine for that autocomplete lol)
+  Coming Next:
+    - Tier 0 Modules available from the start. I'll take the base game module graphic and either adjust the tint or something similarly minor and introduce it as a craftable item for the burner phase of the game since SE introduces all these new module graphics.
+    - Tier 0 Roboport or robots. Probably inspired heavily by IR3's clockwork or steambots. Hopefully I can find something and throw it into Blender and rotate it and make a sprite sheet since I think they're pretty simple (as compared to trains and other things that have lights and parts that move or are animated separately).
+
+---------------------------------------------------------------------------------------------------
 Version: 1.0.15
 Date: 2023.10.14
   Changes:

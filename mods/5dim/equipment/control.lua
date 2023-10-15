@@ -237,6 +237,13 @@ for index = 3, 10, 1 do
   table.insert(data.raw["roboport-equipment"][dimName].categories, "universal-equipment")
 end
 
+-- Adjust recipe for first original new 5Dim Personal Roboport Equipment (03) to use newly generated 5Dim Personal Roboport Equipment instead of original game Personal Roboport Equipment & MK2 Equipment
+data.raw.recipe["5d-personal-roboport-equipment-03"].ingredients = {
+  {"5d-personal-roboport-equipment-02", 2},
+  {"processing-unit", 15},
+  {"low-density-structure", 5}
+}
+
 local function generateNewPersonalBatteryEquipment(index)
   local item = table.deepcopy(data.raw.item["battery-equipment"])
   local recipe = table.deepcopy(data.raw.recipe["battery-equipment"])
