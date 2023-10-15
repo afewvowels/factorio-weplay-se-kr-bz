@@ -1,3 +1,6 @@
+-- Handles tinting of spidertrons after restoring base game spidertron graphics to the 'trons added from Spidertron Tiers Community Updates.
+require("mods/spidertron-tiers/set-initial-color")
+
 remote.add_interface("weplay_se_kr_bz", {
   jetpack_fuels = function() return {["shielded-plutonium-jetpack-fuel"] = 1.2} end
 })

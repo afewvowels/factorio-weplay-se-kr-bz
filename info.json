@@ -67,6 +67,7 @@
     "FilterChests",
     "mining-patch-planner",
     "ModuleInserterER",
+    "Oil_Based_Paint",
     "OreEraser",
     "PipeVisualizer",
     "power-grid-comb",
@@ -126,7 +127,7 @@
     "FluidMustFlowSE",
     "shield-projector",
     "safefill",
-    "smr",
+    "smr-on-built-entity-fix",
     "textplates",
 
     "Common-Industries",

@@ -49,6 +49,12 @@ data:extend(
           name = "atomic",
           group = "module",
           order = "g"
+        },
+        {
+          type = "item-subgroup",
+          name = "neue-modules",
+          group = "module",
+          order = "h"
         }
     }
 )

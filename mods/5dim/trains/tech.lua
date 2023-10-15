@@ -24,7 +24,7 @@ local function createTech(index)
       recipe = "5d-fluid-wagon-" .. paddedIndex
     }
   }
-  tech.prerequisites = {"automated-rail-transportation", "rail-signals"}
+  tech.prerequisites = {"automated-rail-transportation", "rail-signals", "fluid-wagon"}
   if index > 2 then
     tech.prerequisites = {"5dim-trains-0" .. (index - 1)}
     table.insert(tech.prerequisites, "logistics-" .. (index - 1))

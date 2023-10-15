@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.17
+Date: 2023.10.15
+  Features:
+    - Added Fluid Wagon to requirements for 5Dim Train tier unlocks
+    - Removed superfluous Tier 1 5Dim fusion reactor equipment tech research since it's included in the grouped tech unlock now.
+    - Removed superfluous Tier 1 & 2 5Dim energy shield equipment tech for same reason.
+    - Added Oil Based Paint mod for wider color ranges.
+    - Begin tweaking Spidertron Tiers - Community Updates graphics. I don't really appreciate the changes made to the original spidertron graphics so I'm restoring the original graphics with maybe some of the graphics from Spidertron Extended for different colored eyes then using Oil-Based Paints wider color gamut to apply initial tints to the Spidertrons added from Spidertron Tiers - Community updates mod. I've currently swapped out the graphics the mod uses for the base game spidertron and lifted some of the tinting-on-placement code from Spidertron Extended to tint the colors of Tiers spidertrons to kind of match their icons (which are still being used).
+    - Added a Burner Productivity Module for the very early game so there's less need to bust out the infinity chest for speeding up early game production.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.16
 Date: 2023.10.14
   Major Features:
@@ -8,11 +18,10 @@ Date: 2023.10.14
   Coming Next:
     - Tier 0 Modules available from the start. I'll take the base game module graphic and either adjust the tint or something similarly minor and introduce it as a craftable item for the burner phase of the game since SE introduces all these new module graphics.
     - Tier 0 Roboport or robots. Probably inspired heavily by IR3's clockwork or steambots. Hopefully I can find something and throw it into Blender and rotate it and make a sprite sheet since I think they're pretty simple (as compared to trains and other things that have lights and parts that move or are animated separately).
-
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.15
 Date: 2023.10.14
   Changes:
-      - Added pyroflux as a fuel/ammo type for new 5Dim flamethrower turrets
-      - Added new 5Dim equipment for Personal Battery, Power Armor, Energy Shield, Personal Roboport Equipment for Tier 1 and 2. Adjusted recipes for Tier 3 items to use these new items instead of the vanilla gameobjects.
-      - Adjusted Express Miniloader and Ultra-Fast Miniloader tech pack requirements to match Logistics 3 instead of being locked after the Space Science pack.
+    - Added pyroflux as a fuel/ammo type for new 5Dim flamethrower turrets
+    - Added new 5Dim equipment for Personal Battery, Power Armor, Energy Shield, Personal Roboport Equipment for Tier 1 and 2. Adjusted recipes for Tier 3 items to use these new items instead of the vanilla gameobjects.
+    - Adjusted Express Miniloader and Ultra-Fast Miniloader tech pack requirements to match Logistics 3 instead of being locked after the Space Science pack.

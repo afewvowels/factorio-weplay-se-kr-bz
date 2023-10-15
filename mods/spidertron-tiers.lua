@@ -1,4 +1,5 @@
-
+-- Restore basegame spidertron graphics to Spidertron Tiers - Community Updates spidertrons. Color tint is handled in control.lua on entity placed.
+require("mods/spidertron-tiers/graphics-swap")
 
 function doubleEquipmentGridSize(name)
   local equipment_grid = data.raw["equipment-grid"][name]

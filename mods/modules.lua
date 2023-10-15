@@ -1,4 +1,4 @@
-
+-- Rescale current modules Tier 1-9 added from Space Exploration
 for index = 1, 8 do
   local productivityBonus = nil
   local speedBonus = nil
@@ -90,3 +90,39 @@ newModuleStats = {
 }
 
 data.raw["module"]["speed-module-9"].effect = newModuleStats
+
+-- Add new Tier 0 module for burner phase before module technology is unlocked
+data:extend({
+  {
+    type = "module",
+    name = "burner-module",
+    icon = "__weplay_se_kr_bz__/graphics/icons/burner-module-icon.png",
+    icon_size = 64,
+    subgroup = "neue-modules",
+    order = "a",
+    category = "productivity",
+    tier = 1,
+    stack_size = 50,
+    effect =
+    {
+      productivity = {bonus = 0.5},
+      consumption = {bonus = 2},
+      pollution = {bonus = -0.2},
+      speed = {bonus = 0.5}
+    }
+  },
+  {
+      type = "recipe",
+      name = "burner-module",
+      subgroup = "neue-modules",
+      order = "a",
+      ingredients = {
+        {name = "aluminum-plate", amount = 2},
+        {name = "wood", amount = 2},
+        {name = "stone", amount = 1}
+      },
+      energy_required = 2,
+      result = "burner-module",
+      enabled = true
+  }
+})

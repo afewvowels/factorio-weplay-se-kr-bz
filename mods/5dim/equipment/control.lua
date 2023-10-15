@@ -39,21 +39,7 @@ local function generateTier1PersonalFusionReactorEquipment()
       "__5dim_equipment__/graphics/equipment/fusion-reactor/fusion-reactor-equipment-01.png"
   equipment.shape = { width = 2, height = 2, type = "full" }
 
-  tech.name = "5d-fusion-reactor-equipment-01"
-  tech.icon = item.icon
-  tech.icons = nil
-  tech.icon_size = 64
-  tech.unit.count = 50
-  tech.unit.ingredients = data.raw.technology["se-rtg-equipment"].unit.ingredients
-  tech.prerequisites = { "se-rtg-equipment" }
-  tech.effects = {
-      {
-          type = "unlock-recipe",
-          recipe = item.name
-      }
-  }
-
-  data:extend({ item, recipe, equipment, tech })
+  data:extend({ item, recipe, equipment })
 end
 
 local function generateEnergyShield(index)
@@ -95,34 +81,7 @@ local function generateEnergyShield(index)
   equipment.sprite.filename =
     "__5dim_equipment__/graphics/equipment/energy-shield/energy-shield-equipment-0" .. index .. ".png"
 
-  tech.name = name
-  tech.icon = icon
-  tech.icon_size = 64
-  tech.effects = {
-    {
-      type = "unlock-recipe",
-      recipe = name
-    }
-  }
-  tech.unit.count = 50
-  tech.unit.ingredients = {
-    {"basic-tech-card", 1},
-    {"automation-science-pack", 1},
-    {"logistic-science-pack", 1},
-    {"chemical-science-pack", 1},
-    {"military-science-pack", 1}
-  }
-
-  if index > 1 then
-    table.insert(tech.unit.ingredients, {"se-rocket-science-pack", 1})
-  end
-
-  tech.prerequisites = { "se-adaptive-armour-1" }
-  if index > 1 then
-    tech.prerequisites = { "5d-energy-shield-equipment-0" .. (index - 1) }
-  end
-
-  data:extend({ tech, item, recipe, equipment })
+  data:extend({ item, recipe, equipment })
 end
 
 generateEnergyShield(1)
