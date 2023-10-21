@@ -9,6 +9,8 @@ Date: 2023.10.20
     - Fixed internal power buffer on personal defense laser equipments so they actually fire now!
     - Added Krastorio2 Research Server and Quantum Computer to list of production structures that can use productivity effects.
     - I'm currently puzzling over how to modify spaceship fuel thrust ratio values and integrity checks for containers and the like. Poking around the code I did notice there's a 90% savings for using locomotives and cargo wagons (not fluid wagons tho) for calculating integrity. Neat bonus that I don't see talked about a lot.
+    - Also a few tweaks to the hidden electric shuttle train fuel to hold a bigger charge while I work on adjusting that a bit as well.
+    - Updated the depecdencies list.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.17
 Date: 2023.10.15
