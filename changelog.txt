@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.18
+Date: 2023.10.20
+  Features:
+    - Added new Tier 1 5Dim equipments to "universal-equipment" categories
+    - Modified start and added setting for current power armor mk1 starting equipment. Now start with light armor + solar panels as I added equipment grids to all types of armors. Very OP compared to a regular start but there's just so much to do!
+    - Added casting machines to list of assembling machines allowed to use productivity module bonuses.
+    - Modified Shuttle Train to have a slightly larger equipment grid for batteries and such.
+    - Fixed internal power buffer on personal defense laser equipments so they actually fire now!
+    - Added Krastorio2 Research Server and Quantum Computer to list of production structures that can use productivity effects.
+    - I'm currently puzzling over how to modify spaceship fuel thrust ratio values and integrity checks for containers and the like. Poking around the code I did notice there's a 90% savings for using locomotives and cargo wagons (not fluid wagons tho) for calculating integrity. Neat bonus that I don't see talked about a lot.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.17
 Date: 2023.10.15
   Features:

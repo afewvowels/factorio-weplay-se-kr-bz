@@ -26,7 +26,7 @@ local function generateTier1PersonalFusionReactorEquipment()
   recipe.icon_size = 64
   recipe.ingredients = {
     {"se-rtg-equipment", 1},
-    {"processing-unit", 200},
+    {"processing-unit", 25},
     {"low-density-structure", 50}
   }
   recipe.enabled = false
@@ -35,11 +35,24 @@ local function generateTier1PersonalFusionReactorEquipment()
   equipment.name = "5d-fusion-reactor-equipment-01"
   equipment.take_result = "5d-fusion-reactor-equipment-01"
   equipment.power = "100MW"
+  equipment.categories = { "universal-equipment" }
   equipment.sprite.filename =
       "__5dim_equipment__/graphics/equipment/fusion-reactor/fusion-reactor-equipment-01.png"
   equipment.shape = { width = 2, height = 2, type = "full" }
 
   data:extend({ item, recipe, equipment })
+end
+
+for index = 2, 10 do
+  local name = "5d-fusion-reactor-equipment-0" .. index
+  if index == 10 then
+    name = "5d-fusion-reactor-equipment-" .. index
+  end
+  data.raw.recipe[name].ingredients = {
+    {"5d-fusion-reactor-equipment-0" .. (index - 1), 1},
+    {"processing-unit", 20},
+    {"low-density-structure", 20}
+  }
 end
 
 local function generateEnergyShield(index)
@@ -75,6 +88,7 @@ local function generateEnergyShield(index)
 
   equipment.name = name
   equipment.take_result = name
+  equipment.categories = { "universal-equipment" }
   equipment.max_shield_value = 200 * index
   equipment.energy_source.buffer_capacity = (2 * index) .. "MJ"
   equipment.energy_source.input_flow_limit = (2 * index) .. "MW"
@@ -126,14 +140,15 @@ local function generateNewPersonalRoboports(index)
   -- Generate equipment
   equipment.name = name
   equipment.take_result = name
-  equipment.construction_radius = 10 + (index * 5)
-  equipment.robot_limit = 25 + (index * 5)
+  equipment.categories = { "universal-equipment" }
+  equipment.construction_radius = 15 + (index * 5)
+  equipment.robot_limit = 30 + (index * 5)
   equipment.charging_station_count = 10 + (index * 2)
-  equipment.charging_energy = 4 + (index * 2) .. "MW"
+  equipment.charging_energy = 6 + (index * 2) .. "MW"
   equipment.energy_source = {
     type = "electric",
-    buffer_capacity = (10 * index) .. "MJ",
-    input_flow_limit = (2 * index) .. "MW",
+    buffer_capacity = (15 * index) .. "MJ",
+    input_flow_limit = (30 * index) .. "MW",
     usage_priority = "secondary-input"
   }
 
@@ -193,6 +208,13 @@ for index = 3, 10, 1 do
   chargingStationCount = chargingStationCount + 4
   data.raw["roboport-equipment"][dimName].construction_radius = 10 + (index * 5)
   data.raw["roboport-equipment"][dimName].robot_limit = 25 + (index * 5)
+  data.raw["roboport-equipment"][dimName].energy_source =
+  {
+    type = "electric",
+    buffer_capacity = (20 * index) .. "MJ",
+    input_flow_limit = (50 * index) .. "MW",
+    usage_priority = "secondary-input"
+  }
   table.insert(data.raw["roboport-equipment"][dimName].categories, "universal-equipment")
 end
 
@@ -246,7 +268,7 @@ local function generateNewPersonalBatteryEquipment(index)
     buffer_capacity = (100 * index) .. "MJ",
     input_flow_limit = (10 * index) .. "MW",
     ouput_flow_limit = (50 * index) .. "MW",
-    usage_priority = "secondary-input"
+    usage_priority = "tertiary"
   }
 
   data:extend({item, recipe, equipment})
@@ -511,17 +533,23 @@ for index = 1, 10 do
     name = "5d-personal-laser-defense-equipment-" .. number
   end
 
+  data.raw["active-defense-equipment"][name].energy_source.buffer_capacity = "50MJ"
   data.raw["active-defense-equipment"][name].attack_parameters.range = 30 + index
   data.raw["active-defense-equipment"][name].attack_parameters.ammo_type.energy_consumption = "1MJ"
   data.raw["active-defense-equipment"][name].attack_parameters.ammo_type.cooldown = 40 - index
   data.raw["active-defense-equipment"][name].attack_parameters.damage_modifier = 10 + index
-  -- data.raw["active-defense-equipment"][name].attack_parameters.ammo_type.action.action_delivery.max_length = 35 + index
+  if index > 1 then
+    data.raw["active-defense-equipment"][name].attack_parameters.ammo_type.action.action_delivery.max_length = 35 + index
+  end
 
+  data.raw["active-defense-equipment"][teslaName].energy_source.buffer_capacity = "50MJ"
   data.raw["active-defense-equipment"][teslaName].attack_parameters.range = 20 + index
   data.raw["active-defense-equipment"][teslaName].attack_parameters.ammo_type.energy_consumption = "1MJ"
   data.raw["active-defense-equipment"][teslaName].attack_parameters.ammo_type.cooldown = 20 - index
   data.raw["active-defense-equipment"][teslaName].attack_parameters.damage_modifier = 7 + index
-  -- data.raw["active-defense-equipment"][teslaName].attack_parameters.ammo_type.action.action_delivery.max_length = 35 + index
+  if index > 1 then
+    data.raw["active-defense-equipment"][teslaName].attack_parameters.ammo_type.action.action_delivery.max_length = 35 + index
+  end
   -- data.raw["active-defense-equipment"][teslaName].attack_parameters.ammo_type.category = "electric"
   -- data.raw["active-defense-equipment"][teslaName].attack_parameters.ammo_type.action.action_delivery.beam = "electric-beam"
 end

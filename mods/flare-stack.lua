@@ -81,3 +81,69 @@ data:extend({
         order = "zz[incineration]"
     }
 })
+
+
+-- Copy incineration recipe from Flare Stack mod and create some new incineratable item/recipes
+function incinerateRecipe(item, category, craft_category)
+  local newicons = get_icons(item)
+  table.insert(newicons, no_icon)
+  data:extend({
+    {
+      type = "recipe",
+      name = category.."-"..item.name.."-incineration",
+      category = craft_category,
+      enabled = true,
+      hidden = true,
+      -- this is now done through incinerator crafting speed
+      -- energy_required = 1.0 / settings.startup["flare-stack-item-rate"].value,
+      energy_required = 1,
+      ingredients =
+      {
+        {item.name, 1}
+      },
+      results = { },
+      icons = newicons,
+      icon_size = 32,
+      subgroup = "fluid-recipes",
+      order = "zz[incineration]"
+    }
+  })
+end
+
+local category_list =
+{
+  "capsule",
+  "ammo",
+  "gun",
+  "module",
+  "armor",
+  "mining-tool",
+  "repair-tool",
+  "rail-planner",
+  "tool",
+  "locomotive",
+  "fluid-wagon",
+  "cargo-wagon"
+}
+
+local skipTheseNames = {
+  "se-space-elevator-tug",
+  "RT-ghostLocomotive",
+  "RTPayloadWagon",
+  "RTImpactWagon"
+}
+
+incinerateRecipe(data.raw["car"]["car"], "car", "incineration")
+incinerateRecipe(data.raw["car"]["tank"], "car", "incineration")
+
+for _, c in pairs(category_list) do
+  for _, i in pairs(data.raw[c]) do
+    for _, n in pairs(skipTheseNames) do
+      if i.name == n then
+        goto continue
+      end
+    end
+    incinerateRecipe(i, c, "incineration")
+    ::continue::
+  end
+end

@@ -77,6 +77,8 @@ for index = 2, 10 do
     name = "5d-nuclear-reactor-10"
   end
   data.raw["reactor"][name].collision_mask = data.raw["reactor"]["nuclear-reactor"].collision_mask
+  data.raw["reactor"][name].consumption = 250 + (50 * index) .. "MW"
+  data.raw["reactor"][name].neighbor_bonus = math.floor(1 + (index / 2))
 end
 -- data.raw["reactor"]["5d-nuclear-reactor-02"].collision_mask = data.raw["reactor"]["nuclear-reactor"].collision_mask
 

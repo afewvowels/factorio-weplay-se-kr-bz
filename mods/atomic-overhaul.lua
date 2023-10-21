@@ -12,7 +12,7 @@ item.name = "shielded-plutonium-jetpack-fuel"
 item.fuel_value = "1.5GJ"
 
 recipe.name = "shielded-plutonium-jetpack-fuel-recipe"
-recipe.result = {"shielded-plutonium-jetpack-fuel", 1}
+recipe.results = {{"shielded-plutonium-jetpack-fuel", 1}}
 
 data:extend({item, recipe})
 

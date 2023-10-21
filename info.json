@@ -1,6 +1,6 @@
 {
   "name": "weplay_se_kr_bz",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "title": "We Play: SE + KR2 + BZMods",
   "author": "We Play",
   "factorio_version": "1.1",
@@ -56,6 +56,7 @@
     "Spidertron-Inventory-Sorter",
     "spidertrontiers-community-updates",
 
+    "AutomaticStationNames",
     "BigBags",
     "? BlueprintSignals_continued",
     "bobinserters",

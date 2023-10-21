@@ -21,7 +21,7 @@ function initPlayer(player)
 	player.get_inventory(defines.inventory.character_guns).clear()
 	player.get_inventory(defines.inventory.character_ammo).clear()
 
-	local items = {
+	local powerArmorStart = {
 		-- resources
     {"shielded-plutonium-jetpack-fuel",100},
     {"cliff-explosives", 100},
@@ -30,21 +30,44 @@ function initPlayer(player)
 		-- other logistic
 		{"construction-robot",50},
 		{"5d-fusion-reactor-equipment-01",4},
-    {"personal-roboport-equipment",3},
+    {"5d-personal-roboport-equipment-01",3},
     {"5d-energy-shield-equipment-01",1},
-    {"battery-equipment", 3},
+    {"5d-battery-equipment-01", 3},
     {"jetpack-1",24},
     {"personal-laser-defense-equipment",4},
     {"5d-personal-tesla-defense-equipment-01",4},
 		-- buildings
 		-- electricity
 		-- equipment
-		{"power-armor",1},
-		{"superior-exoskeleton-equipment",2},
+		{"5d-power-armor-01",1},
+		{"exoskeleton-equipment",2},
 		{"infinity-chest", 50},
 		{"belt-immunity-equipment",1},
 		{"imersite-night-vision-equipment",1}
 	}
+
+  local vanillaStartItems = {
+    {"shielded-plutonium-jetpack-fuel",100},
+    {"cliff-explosives", 100},
+		{"construction-robot",50},
+    {"solar-panel-equipment", 2},
+    {"light-armor", 1},
+    {"jetpack-1", 4},
+    {"5d-battery-equipment-01", 3},
+    {"exoskeleton-equipment", 1},
+    {"5d-personal-roboport-equipment-01", 2},
+		{"infinity-chest", 50},
+		{"belt-immunity-equipment",1},
+		{"imersite-night-vision-equipment",1}
+  }
+
+  local items = nil
+
+  if settings.startup["powerArmorStart"].value then
+    items = powerArmorStart
+  else
+    items = vanillaStartItems
+  end
 
 	for _, v in pairs(items) do
 		player.insert{name = v[1], count = v[2]}

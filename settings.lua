@@ -49,5 +49,14 @@ data:extend({
       maximum_value = 500,
       localised_name = "New Large Stack Size",
       localised_description = "All items that stack below this value will be raised to this value and all items larger than this value will be standardized to the New Large Stack Size value. This max value ranges from 50-500. Note that if this max value is smaller than the min value the default values of both settings will be used instead."
+  },
+  {
+    type = "bool-setting",
+    name = "powerArmorStart",
+    order = "f",
+    setting_type = "startup",
+    default_value = false,
+    localised_name = "Power Armor Start?",
+    localised_description  = "Vanilla start is with light armor as all tiers of armor now come with some sort of grid. Power armor start has a (functionally) limitless fusion generator and much bigger grid size + equipments whereas the vanilla start gets you some admittedly beefy solar panels + battery + roboport + jetpack + exoskeleton. (Default: False)"
   }
 })

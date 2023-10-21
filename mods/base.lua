@@ -1,3 +1,9 @@
+-- Changes to equipment grid for Shuttle Train Refresh mod
+data.raw["equipment-grid"]["shuttle-train"].width = 2
+data.raw["equipment-grid"]["shuttle-train"].height = 6
+data.raw["equipment-grid"]["shuttle-train"].equipment_categories = { "shuttle-train", "universal-equipment", "armor" }
+
+-- Code for modifying stack sizes
 local function setStackSize(size, min, max)
   if size <= min then
     size = min

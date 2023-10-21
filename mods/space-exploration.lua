@@ -99,6 +99,9 @@ local machines = {
   "se-space-telescope-microwave",
   "se-space-telescope-radio",
   "se-space-thermodynamics-laboratory",
+  "se-casting-machine",
+  "kr-research-server",
+  "kr-quantum-computer"
 }
 
 for index, name in pairs(machines) do
@@ -174,6 +177,10 @@ end
 
 if data.raw["item"]["se-water-ice"].stack_size > 200 then
   data.raw["item"]["se-water-ice"].stack_size = 200
+end
+
+if data.raw["item"]["se-iridium-ore"].stack_size < 100 then
+  data.raw["item"]["se-iridium-ore"].stack_size = 100
 end
 
 -- Alter matter production recipe to produce less scrap
